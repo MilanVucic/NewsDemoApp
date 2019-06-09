@@ -11,7 +11,7 @@
         android:layout_width="match_parent">
 
         <com.google.android.material.tabs.TabLayout
-            app:tabBackground="@color/colorAccent"
+            app:tabBackground="@color/tablayout_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />

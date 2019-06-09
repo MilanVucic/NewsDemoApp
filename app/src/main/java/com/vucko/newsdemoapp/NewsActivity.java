@@ -35,9 +35,7 @@ public class NewsActivity extends BaseActivity {
 
     @Override
     protected void setupUI() {
-        if(getSupportActionBar() != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+        setToolbarBackArrow(true);
         if(getIntent() != null){
             NewsArticle newsArticle = (NewsArticle) getIntent().getSerializableExtra(Constants.NEWS);
             if (newsArticle != null) {

@@ -23,6 +23,18 @@ public abstract class BaseActivity extends AppCompatActivity {
         return true;
     }
 
+    protected void setToolbarBackArrow(boolean enabled){
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(enabled);
+        }
+    }
+
+    protected void setToolbarTitle(String title){
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setTitle(title);
+        }
+    }
+
     protected void setupUI() {
 
     }

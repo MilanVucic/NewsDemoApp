@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="category_1">#C90000</color>
+    <color name="category_2">#00E9FF</color>
+    <color name="category_3">#FFEB3B</color>
+    <color name="category_4">#3F51B5</color>
+    <color name="category_5">#4CAF50</color>
+    <color name="category_6">#FF5722</color>
+    <color name="category_7">#00BCD4</color>
+    <color name="tablayout_background">#A5A5A5</color>
 </resources>
