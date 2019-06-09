@@ -53,7 +53,7 @@ public class TopNewsFragment extends BaseFragment {
 
     private void getTopNews() {
         showLoader();
-        ApiHelper.getInstance().getAllHeadlines(Constants.COUNTRY, null, new OnDataCallback<NewsResponseModel>() {
+        ApiHelper.getInstance().getAllHeadlines(Constants.COUNTRY, null, null, new OnDataCallback<NewsResponseModel>() {
             @Override
             public void onSuccess(NewsResponseModel data) {
                 updateUI(data.getArticles());

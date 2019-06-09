@@ -51,7 +51,7 @@ public class CategoryActivity extends BaseActivity {
     }
 
     private void getNewsForCategory(String categoryName) {
-        ApiHelper.getInstance().getAllHeadlines(Constants.COUNTRY, categoryName, new OnDataCallback<NewsResponseModel>() {
+        ApiHelper.getInstance().getAllHeadlines(Constants.COUNTRY, categoryName, null, new OnDataCallback<NewsResponseModel>() {
             @Override
             public void onSuccess(NewsResponseModel data) {
                 updateUI(data.getArticles());

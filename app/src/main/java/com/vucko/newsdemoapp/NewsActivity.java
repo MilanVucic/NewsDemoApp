@@ -39,6 +39,7 @@ public class NewsActivity extends BaseActivity {
         if(getIntent() != null){
             NewsArticle newsArticle = (NewsArticle) getIntent().getSerializableExtra(Constants.NEWS);
             if (newsArticle != null) {
+                setToolbarTitle(newsArticle.getTitle());
                 titleTextView.setText(newsArticle.getTitle());
                 descriptionTextView.setText(newsArticle.getDescription());
                 contentTextView.setText(newsArticle.getContent());

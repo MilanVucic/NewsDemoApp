@@ -65,9 +65,9 @@ public class ApiHelper {
         return instance;
     }
 
-    public void getAllHeadlines(String countryCode, String categoryName, OnDataCallback<NewsResponseModel> onDataCallback){
+    public void getAllHeadlines(String countryCode, String categoryName, String keyword, OnDataCallback<NewsResponseModel> onDataCallback){
         NewsService service = retrofit.create(NewsService.class);
-        Call<NewsResponseModel> call = service.getTopHeadlines(countryCode, categoryName);
+        Call<NewsResponseModel> call = service.getTopHeadlines(countryCode, categoryName, keyword);
         processCall(call, onDataCallback);
     }
 
