@@ -1,6 +1,8 @@
 package com.vucko.newsdemoapp.api.models;
 
-public class NewsSource {
+import java.io.Serializable;
+
+public class NewsSource implements Serializable {
     private String id, name;
 
     public String getId() {

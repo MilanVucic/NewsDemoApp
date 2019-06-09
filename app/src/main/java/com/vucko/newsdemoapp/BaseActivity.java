@@ -17,6 +17,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         setupUI();
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
     protected void setupUI() {
 
     }

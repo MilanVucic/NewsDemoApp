@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_margin="@dimen/standard_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/newsImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="@dimen/image_dimension"
+        android:layout_height="@dimen/image_dimension"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/titleTextView"
+        app:layout_constraintTop_toTopOf="@id/newsImageView"
+        app:layout_constraintStart_toEndOf="@id/newsImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:textSize="@dimen/title_text_size"
+        android:text="Dis is a title and its gonna be very very long for us to see how it behaves"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/descriptionTextView"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintBottom_toBottomOf="@id/newsImageView"
+        app:layout_constraintStart_toStartOf="@id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:ellipsize="end"
+        android:text="Well this is a very important piece of news and why does it not fit"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+        android:background="#7E7E7E"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

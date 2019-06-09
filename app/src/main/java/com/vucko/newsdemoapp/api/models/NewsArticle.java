@@ -1,6 +1,8 @@
 package com.vucko.newsdemoapp.api.models;
 
-public class NewsArticle {
+import java.io.Serializable;
+
+public class NewsArticle implements Serializable {
     private NewsSource source;
     private String author, title, description, url, urlToImage, publishedAt, content;
 
