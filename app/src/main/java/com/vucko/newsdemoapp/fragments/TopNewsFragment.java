@@ -48,7 +48,12 @@ public class TopNewsFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getTopNews();
+        List<NewsArticle> articles = NewsArticle.listAll(NewsArticle.class);
+        if(articles.size() == 0) {
+            getTopNews();
+        } else {
+            updateUI(articles);
+        }
     }
 
     private void getTopNews() {
@@ -56,7 +61,7 @@ public class TopNewsFragment extends BaseFragment {
         ApiHelper.getInstance().getAllHeadlines(Constants.COUNTRY, null, null, new OnDataCallback<NewsResponseModel>() {
             @Override
             public void onSuccess(NewsResponseModel data) {
-                updateUI(data.getArticles());
+                saveToDatabase(data.getArticles());
             }
 
             @Override
@@ -65,6 +70,18 @@ public class TopNewsFragment extends BaseFragment {
                 hideLoader();
             }
         });
+    }
+
+    private void saveToDatabase(List<NewsArticle> articles) {
+        for (NewsArticle article : articles) {
+            article.save();
+        }
+        displayFromDatabase();
+    }
+
+    private void displayFromDatabase() {
+        List<NewsArticle> articles = NewsArticle.listAll(NewsArticle.class);
+        updateUI(articles);
     }
 
     private void showLoader() {

@@ -1,18 +1,12 @@
 package com.vucko.newsdemoapp.api.models;
 
+import com.orm.SugarRecord;
+
 import java.io.Serializable;
 
-public class NewsArticle implements Serializable {
-    private NewsSource source;
+public class NewsArticle extends SugarRecord<NewsArticle> implements Serializable {
     private String author, title, description, url, urlToImage, publishedAt, content;
-
-    public NewsSource getSource() {
-        return source;
-    }
-
-    public void setSource(NewsSource source) {
-        this.source = source;
-    }
+    private boolean favourite;
 
     public String getAuthor() {
         return author;
@@ -68,5 +62,13 @@ public class NewsArticle implements Serializable {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public boolean isFavourite() {
+        return favourite;
+    }
+
+    public void setFavourite(boolean favourite) {
+        this.favourite = favourite;
     }
 }

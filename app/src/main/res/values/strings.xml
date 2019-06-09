@@ -7,4 +7,6 @@
     <string name="search">Search</string>
     <string name="required_field_empty">This field cannot be empty</string>
     <string name="nothing_found">Nothing found</string>
+    <string name="favourite">Favourite</string>
+    <string name="no_favourites_added">No favourites added</string>
 </resources>
